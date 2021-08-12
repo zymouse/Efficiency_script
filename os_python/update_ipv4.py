@@ -11,12 +11,13 @@ import requests
 # os.system(cmd) -- 在终端执行指令，但是交互式指令
 # os.system("ls")
 # def list_transform_string():
-# os.system("avahi-browse -ltr _roger._tcp")  # 第一次获取雷达原始ip
-def get_default_ipv4():
+
+def get_ouster_ipv4():
     """
-    # 获取ouster雷达的默认IP
+    # 获取ouster雷达现在的IP
     return：ouster雷达的默认IPv4的ip
     """
+    os.system("avahi-browse -ltr _roger._tcp")  # 第一次获取雷达原始ip
     return_raw_list = os.popen("avahi-browse -ltr _roger._tcp").readlines()
     # print(return_raw_list)
     return_raw_string  = "".join(return_raw_list)
@@ -25,7 +26,7 @@ def get_default_ipv4():
     return return_ipv4[1]
 
 
-def revise_ipv4(old_ip, new_ip="192.168.1.120"):
+def revise_ouster_ipv4(old_ip, new_ip="192.168.1.120"):
     """
     修改ouster雷达的IP
     para: 
@@ -41,8 +42,11 @@ def revise_ipv4(old_ip, new_ip="192.168.1.120"):
 
 if __name__=="__main__":
     print("start....")
-    old_ip = get_default_ipv4()
-    print(old_ip)
+    # 获取雷达ip
+    old_ip = get_ouster_ipv4()
+    # print(old_ip)
+    status = revise_ouster_ipv4(old_ip, "192.168.1.116")
+    print(status)
 
 
 
