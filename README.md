@@ -20,7 +20,7 @@ $ python3 update_ipv4.py <ipv4>
 $  ping 192.168.1.110
 ```
 ### 1.5 如果遇到这个错误，请这样操作
-![Snipaste_2021-08-25_17-57-53](https://user-images.githubusercontent.com/46778435/130771196-ab2d1d1b-b230-462a-85e8-d9db3bca63cf.png)
+![image](https://user-images.githubusercontent.com/46778435/130771825-392252b4-a28d-4698-84a1-03b146914668.png)
 #### .1 设置工控机ip为自动获取模式
 ![image](https://user-images.githubusercontent.com/46778435/130753680-53a5078d-d7d5-4d2f-92d4-f824a9d7aaac.png)
 #### .2 设置完成后，需要检查是否自动获取到ip[如下图，则是成功获取]
