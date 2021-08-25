@@ -7,6 +7,7 @@
 import os
 import re
 import requests
+import sys
 
 # os.system(cmd) -- 在终端执行指令，但是交互式指令
 # os.system("ls")
@@ -25,16 +26,13 @@ def get_ouster_ipv4():
         return_ipv4 = re.search("address = \[[0-9\.]{13,15}",return_raw_string).group().split("[", 1)
     except AttributeError as error:
         print("AttributeError:",error) 
-        print("没有获取到ipv4，可能雷达有问题。")
+        print("获取ipv4失败，请查看文档的解决方法。")
         return None     
     else:
         return return_ipv4[1]
-  
-    
-    
 
 
-def revise_ouster_ipv4(old_ip, new_ip="192.168.1.120"):
+def revise_ouster_ipv4(old_ip, new_ip="192.168.1.110"):
     """
     修改ouster雷达的IP
     para: 
@@ -48,14 +46,27 @@ def revise_ouster_ipv4(old_ip, new_ip="192.168.1.120"):
     put_response = requests.put('http://{}/api/v1/system/network/ipv4/override'.format(old_ip),headers={'Content-Type': 'application/json'},json='{}/24'.format(new_ip))
     return put_response.status_code
 
-if __name__=="__main__":
-    print("start....")
+
+def main():
     # 获取雷达ip
     old_ip = get_ouster_ipv4()
     if old_ip != None:
-        print("ouster old ip: ", old_ip)
-        status = revise_ouster_ipv4(old_ip, "192.168.1.110")
-        print(status)
+        try:
+            new_ip = sys.argv[1]
+        except IndexError:
+            print("ouster old ip: ", old_ip)
+            status = revise_ouster_ipv4(old_ip )
+            if status == 200:
+                print("ip设置成功：请[ping {}]测试是否成功".format("192.168.1.110"))
+        else:
+            print("ouster old ip: ", old_ip)
+            status = revise_ouster_ipv4(old_ip, new_ip=new_ip)
+            if status == 200:
+                print("ip设置成功：请[ping {}]测试是否成功".format(new_ip))
 
 
 
+
+if __name__=="__main__":
+    print("start....")
+    main()
