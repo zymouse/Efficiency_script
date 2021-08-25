@@ -21,9 +21,17 @@ def get_ouster_ipv4():
     return_raw_list = os.popen("avahi-browse -ltr _roger._tcp").readlines()
     # print(return_raw_list)
     return_raw_string  = "".join(return_raw_list)
-    return_ipv4 = re.search("address = \[[0-9\.]{13,15}",return_raw_string).group().split("[", 1)
-    # print(return_ipv4[1])
-    return return_ipv4[1]
+    try:
+        return_ipv4 = re.search("address = \[[0-9\.]{13,15}",return_raw_string).group().split("[", 1)
+    except AttributeError as error:
+        print("ouster ipV4 = Null")
+        print("AttributeError:",error) 
+        return None     
+    else:
+        return return_ipv4[1]
+  
+    
+    
 
 
 def revise_ouster_ipv4(old_ip, new_ip="192.168.1.120"):
@@ -44,9 +52,10 @@ if __name__=="__main__":
     print("start....")
     # 获取雷达ip
     old_ip = get_ouster_ipv4()
-    # print(old_ip)
-    status = revise_ouster_ipv4(old_ip, "192.168.1.116")
-    print(status)
+    if old_ip != None:
+        print("ouster old ip: ", old_ip)
+        status = revise_ouster_ipv4(old_ip, "192.168.1.116")
+        print(status)
 
 
 
