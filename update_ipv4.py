@@ -24,8 +24,8 @@ def get_ouster_ipv4():
     try:
         return_ipv4 = re.search("address = \[[0-9\.]{13,15}",return_raw_string).group().split("[", 1)
     except AttributeError as error:
-        print("ouster ipV4 = Null")
         print("AttributeError:",error) 
+        print("没有获取到ipv4，可能雷达有问题。")
         return None     
     else:
         return return_ipv4[1]
@@ -54,7 +54,7 @@ if __name__=="__main__":
     old_ip = get_ouster_ipv4()
     if old_ip != None:
         print("ouster old ip: ", old_ip)
-        status = revise_ouster_ipv4(old_ip, "192.168.1.116")
+        status = revise_ouster_ipv4(old_ip, "192.168.1.110")
         print(status)
 
 
