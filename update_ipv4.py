@@ -57,12 +57,12 @@ def main():
             print("ouster old ip: ", old_ip)
             status = revise_ouster_ipv4(old_ip )
             if status == 200:
-                print("ip设置成功：请[ping {}]测试是否成功".format("192.168.1.110"))
+                print("ip设置成功：新ping为:{}".format("192.168.1.110"))
         else:
             print("ouster old ip: ", old_ip)
             status = revise_ouster_ipv4(old_ip, new_ip=new_ip)
             if status == 200:
-                print("ip设置成功：请[ping {}]测试是否成功".format(new_ip))
+                print("ip设置成功：新ping为:{}".format(new_ip))
 
 
 
