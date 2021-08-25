@@ -23,7 +23,7 @@ def get_ouster_ipv4():
     # print(return_raw_list)
     return_raw_string  = "".join(return_raw_list)
     try:
-        return_ipv4 = re.search("address = \[[0-9\.]{13,15}",return_raw_string).group().split("[", 1)
+        return_ipv4 = re.search("address = \[[0-9\.]{10,15}",return_raw_string).group().split("[", 1)
     except AttributeError as error:
         print("AttributeError:",error) 
         print("获取ipv4失败，请查看文档的解决方法。")
