@@ -17,10 +17,9 @@
 # 不填写 <ipv4>，则是把ouster设置成默认的ip(192.168.1.110)
 $ python3 update_ipv4.py <ipv4>
 ```
-#### .4 验证是否修改成功
 #### 这是修改成功的样子
 ![image](https://user-images.githubusercontent.com/46778435/130771581-0c71fb22-270c-4def-86af-49e1e9cb8685.png)
-#### 1.4 检测是否设置成功
+#### .4 检测是否设置成功
 ```
 # 我把雷达ip设置为 192.168.1.110
 $  ping 192.168.1.110
