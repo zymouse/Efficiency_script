@@ -7,11 +7,17 @@
 ```
 ## 1.0 ouster雷达自动固化ip脚本使用教程
 #### 1.3 启动脚本开始修改
+#### .1 设置工控机ip为自动获取模式
+![image](https://user-images.githubusercontent.com/46778435/130753680-53a5078d-d7d5-4d2f-92d4-f824a9d7aaac.png)
+#### .2 设置完成后，需要检查是否自动获取到ip[如下图，则是成功获取]
+![image](https://user-images.githubusercontent.com/46778435/130753801-21d6dfd1-11cc-4e9e-8785-f2890f22d965.png)
+#### .3 运行脚本，开始修改IP 
 ```
 # <ipv4> 为想要设置的ip地址
 # 不填写 <ipv4>，则是把ouster设置成默认的ip(192.168.1.110)
 $ python3 update_ipv4.py <ipv4>
 ```
+#### .4 验证是否修改成功
 #### 这是修改成功的样子
 ![image](https://user-images.githubusercontent.com/46778435/130771581-0c71fb22-270c-4def-86af-49e1e9cb8685.png)
 #### 1.4 检测是否设置成功
