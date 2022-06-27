@@ -24,7 +24,7 @@ $ python3 update_ipv4.py <ipv4>
 # 我把雷达ip设置为 192.168.1.110
 $  ping 192.168.1.110
 ```
-### 1.5 如果遇到这个错误，请这样操作
+### 2.0 如果遇到这个错误，请这样操作
 ![image](https://user-images.githubusercontent.com/46778435/130771825-392252b4-a28d-4698-84a1-03b146914668.png)
 #### .1 设置工控机ip为自动获取模式
 ![image](https://user-images.githubusercontent.com/46778435/130753680-53a5078d-d7d5-4d2f-92d4-f824a9d7aaac.png)
