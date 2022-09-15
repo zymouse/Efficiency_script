@@ -1,0 +1,7 @@
+osm_file_inputPath: input/lanelet2_map.osm
+osm_file_outputPath: output/lanelet2_map.osm
+
+array_demo:
+  - array1
+  - array2
+  - array3
