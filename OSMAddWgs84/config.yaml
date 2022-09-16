@@ -1,7 +1,8 @@
 osm_file_inputPath: input/lanelet2_map.osm
 osm_file_outputPath: output/lanelet2_map.osm
 
-array_demo:
-  - array1
-  - array2
-  - array3
+# lanelet2地图坐标系原点的经纬度坐标，lanelet2地图坐标系EUN对齐
+origin_lat: 26.7487259482772
+origin_lon: 106.668773828569
+origin_alt: 1262.3080541566
+
