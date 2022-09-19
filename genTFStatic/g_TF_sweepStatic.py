@@ -54,7 +54,8 @@ def replace_calibration_file():
         if(instr=="yes"):  # 备份原来的文件，并拷贝
             print("完成替换，并备份原文件")
             if(os.path.exists(sweep_calibration_path+sweep_calibration_flie)):
-                os.rename(sweep_calibration_path+sweep_calibration_flie, sweep_calibration_path+sweep_calibration_flie+".old")
+                name_Suffix = strftime("%M%S", gmtime())
+                os.rename(sweep_calibration_path+sweep_calibration_flie, sweep_calibration_path+sweep_calibration_flie+".%s"%name_Suffix)
             else:
                 if(not os.path.exists(sweep_calibration_path)):
                     os.makedirs(sweep_calibration_path)
