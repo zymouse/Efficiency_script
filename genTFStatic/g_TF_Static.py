@@ -4,6 +4,7 @@ import rospy
 # from geometry_msgs.msg import Transform
 import tf2_ros
 import io
+import tf
 import ConfigParser
 from time import gmtime, strftime
 from string import Template
@@ -32,6 +33,7 @@ def getTransformationRelation(frame_id, child_frame_id):
     qy = trans.rotation.y
     qz = trans.rotation.z
     qw = trans.rotation.w
+
     return x, y, z, qx, qy, qz, qw
 
 launch_file = Template("""<launch>

@@ -1,4 +1,0 @@
-<launch>
-	<node pkg="tf" type="static_transform_publisher" name="farme_id1" args="0.000000 0.000000 1.000000 0.479426 0.000000 0.000000 0.877583 a1 b1 100" />
-	<node pkg="tf" type="static_transform_publisher" name="farme_id2" args="0.000000 0.000000 1.000000 0.479426 0.000000 0.000000 0.877583 a2 b2 100" />
-</launch>

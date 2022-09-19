@@ -8,7 +8,7 @@ from pyproj import Transformer
 
 class OsmAddWgs84:
     def __init__(self):
-        yaml.warnings({'YAMLLoadWarning':False}) 
+        # yaml.warnings({'YAMLLoadWarning':False}) 
         with open(file="config.yaml",mode="r",encoding="utf-8") as f:
             config = yaml.load(f)
         print(config["osm_file_inputPath"])
@@ -26,6 +26,7 @@ class OsmAddWgs84:
             #     print ("Title: %s" % movie.getAttribute("title"))
             if node.hasAttribute("id"):
                 print("id={}-------".format(node.getAttribute("id")))
+                pass
             tags = node.getElementsByTagName('tag')
             for tag in tags:
                 # print ("\tFormat: %s" % tag.getAttribute("k"))
@@ -34,6 +35,7 @@ class OsmAddWgs84:
                     value_name = tag.getAttribute("v")
                     if(key_name == "local_x" or key_name == "local_y" or key_name == "ele"):
                         print("\t{}: {}".format(key_name, value_name))
+                        pass
     
 
 
