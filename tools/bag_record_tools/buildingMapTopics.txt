@@ -1,0 +1,8 @@
+# 建图需要的topic开启与录制
+#!/bin/bash
+/fixposition/navsatfix     
+/fixposition/odometry         
+/fixposition/odometry_enu      
+/velodyne_points               
+/zed2i/zed_node/imu/data             
+/zed2i/zed_node/imu/data_raw 
