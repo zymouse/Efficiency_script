@@ -6,3 +6,4 @@ calibration_tool/ros_driver/devel/
 calibration_tool/ros_driver/install/
 calibration_tool/ros_driver/logs/
 .catkin_tools/
+tools/ros_driver/src/rs_to_velodyne/CMakeLists.txt
