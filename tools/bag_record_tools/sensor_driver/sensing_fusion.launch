@@ -5,6 +5,8 @@
     <include file="tf_base_link.launch"/>
 
     <node pkg="tf" type="static_transform_publisher" name="rs16TOrsbp" args="0.653464 0.0118075 -0.653786   3.09277  -1.36936 0.0644343 /rs16 /rsbp 10" />
-    <node pkg="tf" type="static_transform_publisher" name="rsbpTOrszed" args="0.147181 0.0399165 0.0409394   2.9925 -1.44264 0.170506 /rsbp /zed2i_left_camera_frame 10" />
+    <node pkg="tf" type="static_transform_publisher" name="rsbp2rszed" args="0.147181 0.0399165 0.0409394   2.9925 -1.44264 0.170506 /rsbp /zed2i_left_camera_frame 10" />
+    <node pkg="tf" type="static_transform_publisher" name="rs162velodyne" args="0 0 0  0 0 0 /velodyne  /rs16 10" />
+
   </launch>
   
