@@ -42,26 +42,6 @@ class OsmAddWgs84:
         print(self.originUtmY)
 
 
-<<<<<<< HEAD
-    def readXMLfile(self):
-        for node in self.xmlNodesObj:
-            # print ("*****Movie*****")
-            # if movie.hasAttribute("title"):
-            #     print ("Title: %s" % movie.getAttribute("title"))
-            if node.hasAttribute("id"):
-                print("id={}-------".format(node.getAttribute("id")))
-                pass
-            tags = node.getElementsByTagName('tag')
-            for tag in tags:
-                # print ("\tFormat: %s" % tag.getAttribute("k"))
-                if tag.hasAttribute("k") and tag.hasAttribute("v"):
-                    key_name = tag.getAttribute("k")
-                    value_name = tag.getAttribute("v")
-                    if(key_name == "local_x" or key_name == "local_y" or key_name == "ele"):
-                        print("\t{}: {}".format(key_name, value_name))
-                        pass
-=======
->>>>>>> 81dd590011f25a236bcc588452d2c79791c7caea
     
     # xml文件里，node元素的对象里，tag元素解析
     def nodeE_tagEParse(self, node):
