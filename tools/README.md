@@ -12,4 +12,9 @@ OSM地图经纬度填写：OSMAddWgs84/
 标定工具启动：tools/calibration_tool
 传感器启动：tools/sensor_driver
 ```
+```
+tools/config 存放标定结果文件
+```
+
+
  
