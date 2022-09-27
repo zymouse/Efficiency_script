@@ -13,6 +13,6 @@
     <node name="rsHelio16_P2velodyne" pkg="rs_to_velodyne" type="rs_to_velodyne" args="XYZIRT XYZIRT"/> 
     <node pkg="tf" type="static_transform_publisher" name="rs162velodyne" args="0 0 0  0 0 0 /velodyne  /rs16 10" />
 
-    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find config_launch)/config/LIO-SAM-6AXIS_record.rviz" /> 
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find config_pkg)/rvizConfig/LIO-SAM-6AXIS_record.rviz" /> 
   </launch>
   

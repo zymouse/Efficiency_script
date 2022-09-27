@@ -75,7 +75,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /sensing/lidar/rs16/points_raw
+      Topic: /rs16/points_raw
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -103,7 +103,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /sensing/lidar/rsbp/points_raw
+      Topic: /rsbp/points_raw
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -131,7 +131,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.009999999776482582
       Style: Flat Squares
-      Topic: /sensing/camera/zed2i/zed_node/point_cloud/cloud_registered
+      Topic: zed2i/zed_node/point_cloud/cloud_registered
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
