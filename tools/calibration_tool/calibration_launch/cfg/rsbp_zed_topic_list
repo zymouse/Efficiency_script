@@ -6,4 +6,4 @@
 
 
 
-rosrun tf static_transform_publisher 3.31194 1.99251 2.66975 1.85741 2.97765 2.10622 /rsbp /zed2i_left_camera_frame 10
+rosrun tf static_transform_publisher 0.163, -0.020, 0.045 0.661, 0.015, 0.750, -0.000 /rsbp /zed2i_left_camera_frame 10
