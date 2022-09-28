@@ -1,9 +1,0 @@
-2
-/zed2i/zed_node/point_cloud/cloud_registered
-0 0 0 0 0 0 
-/rsbp/points_raw
-0.6 0 -0.4  0 0 0 
-
-
-
-rosrun tf static_transform_publisher 0.163, -0.020, 0.045 0.661, 0.015, 0.750, -0.000 /rsbp /zed2i_left_camera_frame 10

@@ -1,14 +1,14 @@
 <launch>
-    <arg name="points_parent_src" default="/rsbp/points_raw" />
-    <arg name="points_child_src" default="/zed2i/zed_node/point_cloud/cloud_registered" />
-    <arg name="init_params_file_path" default="/home/t/zymouse/calibration/calibration_launch/cfg/rsbp_zed_topic_list"/>
+    <arg name="points_parent_src" default="/rs16/points_raw" />
+    <arg name="points_child_src" default="/rsbp/points_raw" />
+    <arg name="init_params_file_path" default="/home/t/zymouse/calibration/calibration_launch/cfg/flm_rs16_rsbp_topic_list"/>
     <arg name="voxel_size" default="0.1" />
     <arg name="ndt_epsilon" default="0.1" />
     <arg name="ndt_step_size" default="0.1" />
     <arg name="ndt_resolution" default="0.5" />
     <arg name="ndt_iterations" default="100" />
 
-    <node pkg="multi_lidar_calibrator" type="multi_lidar_calibrator" name="rsbp_zed_calibrator" output="screen">
+    <node pkg="multi_lidar_calibrator" type="multi_lidar_calibrator" name="rs16_rsbp_calibrator" output="screen">
         <param name="points_parent_src" value="$(arg points_parent_src)" />
         <param name="points_child_src" value="$(arg points_child_src)" />
         <param name="init_params_file_path" value="$(arg init_params_file_path)" />
