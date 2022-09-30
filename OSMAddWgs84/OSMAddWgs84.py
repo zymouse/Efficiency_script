@@ -15,8 +15,9 @@ class OsmAddWgs84:
             config = yaml.load(f)
         print(config["osm_file_inputPath"])
 
-        self.osm_file_outputPath = config["osm_file_outputPath"]
-        self.DOMTree = parse(config["osm_file_inputPath"])
+        self.osm_file_outputPath = config["osm_file_outputPath"] + config["fileName"][0:-4] + "ok.osm"
+        
+        self.DOMTree = parse(config["osm_file_inputPath"]+config["fileName"])
         self.collection = self.DOMTree.documentElement
         print(self.DOMTree)
 
