@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 #！-*- coding:utf-8 -*-
+"""
+计算点的经纬度，并添加到文本中，生成新文本
+"""
 from re import L
 from readline import parse_and_bind
 from tokenize import Double
@@ -13,10 +16,11 @@ class OsmAddWgs84:
         # yaml.warnings({'YAMLLoadWarning':False}) 
         with open(file="config.yaml",mode="r",encoding="utf-8") as f:
             config = yaml.load(f)
-        print(config["osm_file_inputPath"])
+        # print(config["osm_file_inputPath"])
 
         self.osm_file_outputPath = config["osm_file_outputPath"] + config["fileName"][0:-4] + "ok.osm"
         
+        # print(config["osm_file_inputPath"]+config["fileName"])
         self.DOMTree = parse(config["osm_file_inputPath"]+config["fileName"])
         self.collection = self.DOMTree.documentElement
         print(self.DOMTree)
@@ -65,6 +69,9 @@ class OsmAddWgs84:
                               
     def readXMLfile(self):
         for node in self.collection.getElementsByTagName("node"):
+            self.nodeE_tagEParse(node)
+
+        for node in self.collection.getElementsByTagName("funtionPoint"):
             self.nodeE_tagEParse(node)
 
         with open(self.osm_file_outputPath,'w',encoding='utf-8') as f:
