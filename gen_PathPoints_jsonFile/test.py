@@ -81,7 +81,7 @@ def read_all_sh_file(dir_path: str):
 
 
 if __name__ == "__main__":
-    yaml_dir_path = "C:/Users/huyue/Desktop/flm_sweeping_scripts-master"
+    yaml_dir_path = "./flm_sweeping_scripts-master"
     yaml_file_paths = os.listdir(yaml_dir_path)
     file_order = [int(x.split('_')[0]) for x in yaml_file_paths]
 

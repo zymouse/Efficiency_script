@@ -1,0 +1,87 @@
+[0.580s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-n']
+[0.580s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], base_paths=['.'], build_base='build', ignore_user_meta=False, log_base=None, log_level=None, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7f024fa7a9b0>>, metas=['./colcon.meta'], names_only=True, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, paths=None, paths_only=False, topological_graph=False, topological_graph_density=False, topological_graph_dot=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, topological_graph_legend=False, topological_order=False, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7f024fa7a9b0>, verb_name='list', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f024f83cf98>)
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.619s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.620s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.620s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/zymouse/code/Efficiency_script/gen_PathPoints_jsonFile'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.620s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.634s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.635s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extensions ['ignore', 'ignore_ament_install']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extension 'ignore'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extension 'ignore_ament_install'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extensions ['colcon_pkg']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extension 'colcon_pkg'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extensions ['colcon_meta']
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extension 'colcon_meta'
+[0.636s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extensions ['ros']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extension 'ros'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extensions ['cmake', 'python']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extension 'cmake'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extension 'python'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extensions ['python_setup_py']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input) by extension 'python_setup_py'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extensions ['ignore', 'ignore_ament_install']
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extension 'ignore'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extension 'ignore_ament_install'
+[0.637s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extensions ['colcon_pkg']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extension 'colcon_pkg'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extensions ['colcon_meta']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extension 'colcon_meta'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extensions ['ros']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extension 'ros'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extensions ['cmake', 'python']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extension 'cmake'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extension 'python'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extensions ['python_setup_py']
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master) by extension 'python_setup_py'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extensions ['ignore', 'ignore_ament_install']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extension 'ignore'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extension 'ignore_ament_install'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extensions ['colcon_pkg']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extension 'colcon_pkg'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extensions ['colcon_meta']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extension 'colcon_meta'
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extensions ['ros']
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extension 'ros'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extensions ['cmake', 'python']
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extension 'cmake'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extension 'python'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extensions ['python_setup_py']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/left_boundary_cleaning_new) by extension 'python_setup_py'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extensions ['ignore', 'ignore_ament_install']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extension 'ignore'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extension 'ignore_ament_install'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extensions ['colcon_pkg']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extension 'colcon_pkg'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extensions ['colcon_meta']
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extension 'colcon_meta'
+[0.641s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extensions ['ros']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extension 'ros'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extensions ['cmake', 'python']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extension 'cmake'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extension 'python'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extensions ['python_setup_py']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(input/flm_sweeping_scripts-master/right_boundary_cleaning_new) by extension 'python_setup_py'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.643s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.643s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.643s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.643s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.643s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults

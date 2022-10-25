@@ -5,7 +5,7 @@
     <include file="$(find fixposition_driver)/launch/tcp.launch"/>
 
 
-    <node pkg="tf" type="static_transform_publisher" name="base_link_rs16" args="0.2 0 1.3 0 0 0 base_link rs16 10" />
+    <node pkg="tf" type="static_transform_publisher" name="base_link_rs16" args="0.2 0 1.3 0 0.0524 0 base_link rs16 10" />
 
     
     <node pkg="rviz" name="rviz" type="rviz" args="-d $(find config_pkg)/rvizConfig/cali.rviz" /> 
