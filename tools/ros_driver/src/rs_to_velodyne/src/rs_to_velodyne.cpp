@@ -206,9 +206,9 @@ int main(int argc, char **argv) {
         output_type = argv[2];
 
         if (std::strcmp("XYZI", argv[1]) == 0) {
-            subRobosensePC = nh.subscribe("/rs16/points_raw", 1, rsHandler_XYZI);
+            subRobosensePC = nh.subscribe("/sensing/lidar/rs16/points_raw", 1, rsHandler_XYZI);
         } else if (std::strcmp("XYZIRT", argv[1]) == 0) {
-            subRobosensePC = nh.subscribe("/rs16/points_raw", 1, rsHandler_XYZIRT);
+            subRobosensePC = nh.subscribe("/sensing/lidar/rs16/points_raw", 1, rsHandler_XYZIRT);
         } else {
             ROS_ERROR(argv[1]);
             ROS_ERROR("Unsupported input pointcloud type. Currently only support XYZI and XYZIRT.");

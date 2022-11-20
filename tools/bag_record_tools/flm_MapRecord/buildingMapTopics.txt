@@ -2,5 +2,5 @@
 /fixposition/odometry         
 /fixposition/odometry_enu      
 /velodyne_points               
-/zed2i/zed_node/imu/data             
-/zed2i/zed_node/imu/data_raw 
+/sensing/camera/zed2i/zed_node/imu/data             
+/sensing/camera/zed2i/zed_node/imu/data_raw 
