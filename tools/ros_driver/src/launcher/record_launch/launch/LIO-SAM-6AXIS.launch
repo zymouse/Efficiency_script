@@ -1,9 +1,9 @@
 <launch>
 
     <include file="$(find config_pkg)/launch/autoware_copy2.launch"/>
-    <node pkg="tf" type="static_transform_publisher" name="rs162velodyne" args="0 0 0  0 0 0 /velodyne  /rs16 10" />
+    <node pkg="tf" type="static_transform_publisher" name="rs162velodyne" args="0 0 0  0 0 0 /rs16 /velodyne  10" />
     
     <node name="rsHelio16_P2velodyne" pkg="rs_to_velodyne" type="rs_to_velodyne" args="XYZIRT XYZIRT"/> 
-    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find config_pkg)/config/record.rviz" /> 
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find config_pkg)/rvizConfig/record.rviz" /> 
   </launch>
   
