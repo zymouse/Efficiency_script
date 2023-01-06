@@ -11,3 +11,5 @@ logs/
 tools/ros_driver/src/rs_to_velodyne/CMakeLists.txt
 tools/ros_driver/.catkin_workspace
 log/
+
+pix-citybot
