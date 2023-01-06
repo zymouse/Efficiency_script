@@ -1,16 +1,80 @@
-a12b1:
-    x:1.0
-    y:2.0
-    z:3.0
-    roll:0.0
-    pitch:1.57
-    yaw:0.0
+base_link2rs16:
+    x: 0.2
+    y: 0.0
+    z: 1.3
+    roll: 0.0
+    pitch: 0.0524
+    yaw: 0.0
     
-a22b2:
-    x:1.0
-    y:2.0
-    z:3.0
-    roll:0.0
-    pitch:1.57
-    yaw:0.0
+base_link2rsbp:
+    x: 0.782670024919
+    y: -0.008707
+    z: 0.628419272189
+    roll: 0.0793773820645
+    pitch: -1.41073573832
+    yaw: 3.08033639016
     
+base_link2zed2i_left_camera_frame:
+    x: 0.877922803115
+    y: 0.0237331531245
+    z: 0.852683109564
+    roll: 0.0151897921243
+    pitch: 0.044662387523
+    yaw: -0.021206103408
+    
+base_link2ultrasonic_0:
+  x: 0.9
+  y: 0.25
+  z: 0.25
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0
+base_link2ultrasonic_1:
+  x: 0.9
+  y: -0.25
+  z: 0.25
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0
+base_link2ultrasonic_2:
+  x: 0.4
+  y: 0.55
+  z: 0.45
+  roll: 0.0
+  pitch: 0.0524
+  yaw: 1.5708
+base_link2ultrasonic_3:
+  x: 0.4
+  y: -0.55
+  z: 0.45
+  roll: 0.0
+  pitch: 0.0524
+  yaw: -1.5708
+base_link2ultrasonic_4:
+  x: -0.15
+  y: 0.55
+  z: 0.45
+  roll: 0.0
+  pitch: 0.0524
+  yaw: 1.5708
+base_link2ultrasonic_5:
+  x: -0.15
+  y: -0.55
+  z: 0.45
+  roll: 0.0
+  pitch: 0.0524
+  yaw: -1.5708
+base_link2ultrasonic_6:
+  x: -0.9
+  y: 0.25
+  z: 0.25
+  roll: 0.0
+  pitch: 0.0
+  yaw: 3.1416
+base_link2ultrasonic_7:
+  x: -0.9
+  y: -0.25
+  z: 0.25
+  roll: 0.0
+  pitch: 0.0
+  yaw: 3.1416

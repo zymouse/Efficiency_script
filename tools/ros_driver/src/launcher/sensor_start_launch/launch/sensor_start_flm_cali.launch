@@ -2,12 +2,10 @@
 
     <include file="$(find rslidar_sdk)/launch/start.launch"/>
     <include file="$(find zed_wrapper)/launch/zed2i.launch"/>
-    <include file="$(find fixposition_driver)/launch/tcp.launch"/>
-
+    <!-- 点云盒子过滤 -->
+    <include file="$(find sensor_start_launch)/launch/PassThroughNodelet.launch"/>
 
     <node pkg="tf" type="static_transform_publisher" name="base_link_rs16" args="0.2 0 1.3 0 0.0524 0 base_link rs16 10" />
-
-    
     <node pkg="rviz" name="rviz" type="rviz" args="-d $(find config_pkg)/rvizConfig/cali.rviz" /> 
   </launch>
   

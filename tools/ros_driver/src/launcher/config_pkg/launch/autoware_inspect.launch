@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Essential parameters -->
+  <arg name="map_path" default="=/home/t/map/hy" doc="point cloud and lanelet2 map directory path"/>
+  <arg name="vehicle_model" default="sweeper"/>
+  <arg name="sensor_model" default="sweeper_sensor_kit"/>
+  <!-- Optional parameters -->
+  <arg name="rviz" default="true" doc="launch rviz"/>
+  <arg name="lanelet2_map_file" default="lanelet2_map.osm" />
+  <arg name="pointcloud_map_file" default="pointcloud_map.pcd" />
+  <arg name="map_origin_file" default="origin.yaml" />
+
+  <!-- Vehicle -->
+  <include file="$(find vehicle_launch)/launch/vehicle.launch">
+    <arg name="vehicle_model" value="$(arg vehicle_model)"/>
+    <arg name="sensor_model" value="$(arg sensor_model)"/>
+  </include>
+
+  <!-- System -->
+  <include file="$(find system_launch)/launch/system.launch">
+    <arg name="run_mode" value="planning_simulation"/>
+  </include>
+
+  <!-- Map -->
+  <include file="$(find map_launch)/launch/map.launch">
+    <arg name="lanelet2_map_path" value="$(arg map_path)/$(arg lanelet2_map_file)" />
+    <arg name="pointcloud_map_path" value="$(arg map_path)/$(arg pointcloud_map_file)"/>
+  </include>
+
+  <rosparam command="load" file="$(arg map_path)/$(arg map_origin_file)" />
+  <!-- Sensing -->
+  <include file="$(find fixposition_driver)/launch/tcp.launch" />
+  <include file="$(find sensing_launch)/launch/sensing.launch">
+    <arg name="launch_driver" value="true"/>
+    <arg name="sensor_model" value="$(arg sensor_model)"/>
+  </include>
+
+  <!-- Localization -->
+  <include file="$(find localization_launch)/launch/localization.launch">
+  </include>
+
+  <!-- Perception -->
+  <include file="$(find perception_launch)/launch/perceptioncopy.launch">
+    <arg name="mode" value="camera_lidar_fusion" doc="options: camera_lidar_fusion, lidar, camera"/>
+  </include>
+
+  <!-- Planning -->
+  <include file="$(find planning_launch)/launch/planning.launch" />
+
+  <!-- Control -->
+  <include file="$(find control_launch)/launch/control.launch">
+    <arg name="lateral_controller_mode" value="pure_pursuit" doc="options: mpc_follower, pure_pursuit"/>
+  </include>
+
+  <!-- AutowareAPI -->
+  <!--
+  <include file="$(find awapi_awiv_adapter)/launch/awapi_awiv_adapter.launch" />
+-->
+  <!-- Rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find config_pkg)/rvizConfig/inspect.rviz" if="$(arg rviz)" />
+
+  <!-- Web Controller -->
+  <include file="$(find roswww)/launch/roswww.launch">
+    <arg name="cached" value="false"/>
+  </include>
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+</launch>

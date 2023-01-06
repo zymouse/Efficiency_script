@@ -1,0 +1,8 @@
+2
+/rs16/points_raw
+0 0 0 0 0 0
+/rsbp/points_raw
+0.617045 -0.008707 -0.640141   3.09529  -1.35841 0.0641659 
+
+
+rosrun tf static_transform_publisher  0.617045 -0.008707 -0.640141   3.09529  -1.35841 0.0641659 /rs16 /rsbp 10

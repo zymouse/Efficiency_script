@@ -3,10 +3,11 @@
 tools/config/*
 
 # catkin
-calibration_tool/ros_driver/build/
-calibration_tool/ros_driver/devel/
-calibration_tool/ros_driver/install/
-calibration_tool/ros_driver/logs/
+build/
+devel/
+install/
+logs/
 .catkin_tools/
 tools/ros_driver/src/rs_to_velodyne/CMakeLists.txt
-/home/zymouse/code/Efficiency_script/gen_PathPoints_jsonFile/flm_sweeping_scripts-master
+tools/ros_driver/.catkin_workspace
+log/

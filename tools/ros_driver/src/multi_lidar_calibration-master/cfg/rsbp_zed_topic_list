@@ -1,9 +1,0 @@
-2
-/sensing/camera/zed2i/zed_node/point_cloud/cloud_registered
-0 0 0 0 0 0 
-/sensing/lidar/rsbp/points_raw
-0.6 0 -0.4  0 0 0 
-
-
-
-rosrun tf static_transform_publisher 3.31194 1.99251 2.66975 1.85741 2.97765 2.10622 /rsbp /zed2i_left_camera_frame 10

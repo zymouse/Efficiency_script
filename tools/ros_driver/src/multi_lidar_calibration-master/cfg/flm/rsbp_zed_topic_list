@@ -1,0 +1,8 @@
+2
+/rsbp/cropbox/points_raw
+0 0 0  0 0 0
+/zed2i/zed_node/cropbox/point_cloud/cloud_registered
+0.206561 -0.027969  0.130269  2.95811 -1.36266 0.209144
+
+
+rosrun tf static_transform_publisher  0.206561 -0.027969  0.130269  2.95811 -1.36266 0.209144 /rsbp /zed2i_left_camera_frame 10

@@ -21,18 +21,74 @@ def iniFileParser(data):
 
 
 baseTF= Template("""${FrameID_F}2$FrameID_S:
-    x:$x
-    y:$y
-    z:$z
-    roll:$roll
-    pitch:$pitch
-    yaw:$yaw
+    x: $x
+    y: $y
+    z: $z
+    roll: $roll
+    pitch: $pitch
+    yaw: $yaw
     """)
 
+TF_template="""base_link2ultrasonic_0:
+  x: 0.9
+  y: 0.25
+  z: 0.25
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0
+base_link2ultrasonic_1:
+  x: 0.9
+  y: -0.25
+  z: 0.25
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0
+base_link2ultrasonic_2:
+  x: 0.4
+  y: 0.55
+  z: 0.45
+  roll: 0.0
+  pitch: 0.0524
+  yaw: 1.5708
+base_link2ultrasonic_3:
+  x: 0.4
+  y: -0.55
+  z: 0.45
+  roll: 0.0
+  pitch: 0.0524
+  yaw: -1.5708
+base_link2ultrasonic_4:
+  x: -0.15
+  y: 0.55
+  z: 0.45
+  roll: 0.0
+  pitch: 0.0524
+  yaw: 1.5708
+base_link2ultrasonic_5:
+  x: -0.15
+  y: -0.55
+  z: 0.45
+  roll: 0.0
+  pitch: 0.0524
+  yaw: -1.5708
+base_link2ultrasonic_6:
+  x: -0.9
+  y: 0.25
+  z: 0.25
+  roll: 0.0
+  pitch: 0.0
+  yaw: 3.1416
+base_link2ultrasonic_7:
+  x: -0.9
+  y: -0.25
+  z: 0.25
+  roll: 0.0
+  pitch: 0.0
+  yaw: 3.1416"""
 
 def replace_calibration_file():
     # 替换文件
-    sweep_calibration_path = "/home/%s/pixautowarearchitectureproposal/install/vehicle_launch/share/vehicle_launch/config/default/sweeper_sensor_kit/"
+    sweep_calibration_path = "/home/%s/pix_sweeping_config/"
     sweep_calibration_flie = "sensors_calibration.yaml"
     sweep_calibration_path = sweep_calibration_path%getpass.getuser()
     
@@ -42,7 +98,7 @@ def replace_calibration_file():
         exit()
         
     while(True):
-        print("文件路径:%s+%s}\n"%(sweep_calibration_path, sweep_calibration_flie))
+        print("文件路径:%s%s}\n"%(sweep_calibration_path, sweep_calibration_flie))
         instr = raw_input("是否替换sensors_calibration.yaml文件(yes/no):")
         print(instr)
 
@@ -70,18 +126,19 @@ def replace_calibration_file():
 
 if __name__ == '__main__':
 
-    config = iniFileParser("input/test.ini")
+    config = iniFileParser("input/sweep.ini")
     sensingTF = list()
     print(config.sections())
     for name_node in  config.sections():
         frame_id = config.get(name_node, "frame_id")
         child_frame_id = config.get(name_node, "child_frame_id")
+        child_frame_id_name = config.get(name_node, "child_frame_id_name")
         trans_set = common.getTransformationRelation(frame_id, child_frame_id)
         # print(trans_set[3])
         rot = PyKDL.Rotation.Quaternion(x=trans_set[3][0], y=trans_set[3][1], z=trans_set[3][2], w=trans_set[3][3])
         YPR_radian = rot.GetEulerZYX()
         # print(YPR_radian)
-        TF_value = baseTF.substitute(FrameID_F=frame_id, FrameID_S=child_frame_id, \
+        TF_value = baseTF.substitute(FrameID_F=frame_id, FrameID_S=child_frame_id_name, \
                             x=trans_set[0], y=trans_set[1], z=trans_set[2],\
                             roll=YPR_radian[2], pitch=YPR_radian[1], yaw=YPR_radian[0])
         # print baseTF 
@@ -92,7 +149,8 @@ if __name__ == '__main__':
     # print node_xmls
     sensingTFs = "\n".join(sensingTF)+"\n"
     # launch_file = launch_file.substitute(node_xml=node_xmls)
-
+    sensingTFs = sensingTFs+TF_template+"\n"
+    
 
     # print launch_file
     # name_Suffix = strftime("%M%S", gmtime())
