@@ -83,7 +83,7 @@ function roscp_yaml_files()
     roscp planning_launch obstacle_avoidance_planner.yaml       $planning_1_2_1_1_path
     roscp planning_launch surround_obstacle_checker.yaml        $planning_1_2_1_2_path
 
-    roscp vehicle_launch sensors_calibration.yaml               $vehicle/$vehicle_1
+    roscp vehicle_launch sensors_calibration.yaml               $vehicle_1_1_path
     roscp vehicle_launch sensor_kit_calibration.yaml            $vehicle_1_1_path
     roscp  vehicle_launch sensors_calibration_copy.yaml         $vehicle_1_1_path
 
