@@ -2,9 +2,9 @@
 control="control"
 control_1="mpc_follower"
 control_2="pedal_calibration"
-control_3="pure_pursit"
+control_3="pure_pursuit"
 control_4="vehicle_cmd_gate"
-control_5="vehicle_controller"
+control_5="velocity_controller"
 
 localization="localization"
 
