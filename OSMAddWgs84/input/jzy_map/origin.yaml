@@ -1,0 +1,3 @@
+sensing:
+   gnss:
+      gnss_poser: {origin_alt: 1214.09676614311, origin_lat: 26.5736173913909, origin_lon: 106.439203411771}
